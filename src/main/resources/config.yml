@@ -1,0 +1,6 @@
+region: "painting"
+cooldown: 6000
+palette:
+  enabled: false
+  blocks:
+    - "stone"
