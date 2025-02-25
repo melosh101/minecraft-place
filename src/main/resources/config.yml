@@ -1,6 +1,9 @@
-region: "painting"
-cooldown: 6000
+#file: noinspection SpellCheckingInspection
+region: painting
+cooldown: 60
 palette:
-  enabled: false
+  enabled: true
   blocks:
-    - "stone"
+    - stone
+  blacklist:
+    - grass

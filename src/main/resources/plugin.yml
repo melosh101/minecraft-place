@@ -8,3 +8,11 @@ commands:
       description: a test command
       usage: /test
       permission: place.command.test
+    painting:
+      description: a command to change the config on the fly
+      usage: /painting <reset_cooldown|set_region|set_cooldown>
+      permission: place.command.painting
+    palette:
+      description: modify the current palette of blocks players can use
+      usage: /palette <list|clear|add|remove>
+      permission: place.command.painting
