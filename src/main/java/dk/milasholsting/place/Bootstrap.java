@@ -1,16 +1,15 @@
 package dk.milasholsting.place;
 
-import com.mojang.brigadier.builder.LiteralArgumentBuilder;
-import com.mojang.brigadier.tree.LiteralCommandNode;
-import dk.milasholsting.place.Brigader.TestCommand;
-import io.papermc.paper.command.brigadier.CommandSourceStack;
-import io.papermc.paper.command.brigadier.Commands;
+import dk.milasholsting.place.brigadier.PaintingCommand;
+import dk.milasholsting.place.brigadier.TestCommand;
 import io.papermc.paper.plugin.bootstrap.BootstrapContext;
 import io.papermc.paper.plugin.bootstrap.PluginBootstrap;
 import io.papermc.paper.plugin.bootstrap.PluginProviderContext;
 import io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.jetbrains.annotations.NotNull;
 
+@SuppressWarnings({"UnstableApiUsage", "unused"})
 public class Bootstrap implements PluginBootstrap {
 
     @Override
@@ -19,11 +18,12 @@ public class Bootstrap implements PluginBootstrap {
             var registrar = commands.registrar();
 
             registrar.register(TestCommand.build());
+            registrar.register(PaintingCommand.build());
         });
     }
 
     @Override
-    public JavaPlugin createPlugin(PluginProviderContext context) {
+    public @NotNull JavaPlugin createPlugin(@NotNull PluginProviderContext context) {
         return new Place();
     }
 }

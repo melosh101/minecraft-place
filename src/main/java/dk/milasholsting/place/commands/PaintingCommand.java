@@ -29,7 +29,7 @@ public class PaintingCommand implements CommandExecutor, TabCompleter {
                 yield false;
             }
 
-            case "get_region" : {
+            case "get_region": {
                 sender.sendMessage("Place is configured to look for region " + Config.region);
                 yield true;
             }

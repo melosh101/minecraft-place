@@ -1,7 +1,6 @@
 package dk.milasholsting.place;
 
 import com.sk89q.worldguard.WorldGuard;
-import dk.milasholsting.place.commands.Commands;
 import dk.milasholsting.place.events.Events;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
@@ -34,7 +33,8 @@ public final class Place extends JavaPlugin {
         worldGuard = WorldGuard.getInstance();
         scheduler = Bukkit.getScheduler();
         Config.load();
-        Commands.register();
+        // won't be needed since we are using brigadier
+        // Commands.register();
         Events.register();
         logger.info("Plugin enabled");
 

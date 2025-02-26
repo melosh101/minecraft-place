@@ -3,6 +3,9 @@ This plugin was inspired by a conversation on [legundo's](https://twitch.tv/legu
 
 You are free to use and modify this plugin to your liking if you want.
 
+# TODO
+- make palette and blacklist Brigadier commands
+
 ## Features {id=features}
 ### This plugins config can be fully modified and changed though the command line {collapsible="true"}
 
