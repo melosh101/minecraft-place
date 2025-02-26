@@ -4,8 +4,8 @@
 
 <instance-profile id="docs"
                  name="Place"
-                 start-page="starter-topic.md">
+                 start-page="Place.md">
 
-    <toc-element topic="starter-topic.md"/>
+    <toc-element topic="Place.md"/>
     <toc-element topic="Commands.md"/>
 </instance-profile>
