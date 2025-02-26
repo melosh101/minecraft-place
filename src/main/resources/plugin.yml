@@ -4,15 +4,15 @@ main: dk.milasholsting.place.Place
 api-version: '1.21'
 depend: ["WorldGuard"]
 commands:
-    test:
-      description: a test command
-      usage: /test
-      permission: place.command.test
     painting:
       description: a command to change the config on the fly
       usage: /painting <reset_cooldown|set_region|set_cooldown>
       permission: place.command.painting
     palette:
       description: modify the current palette of blocks players can use
-      usage: /palette <list|clear|add|remove>
-      permission: place.command.painting
+      usage: /palette <list|clear|add|remove|toggle>
+      permission: place.command.palette
+    blacklist:
+      description: modify the current blacklist blocks players can use
+      usage: /blacklist <list|clear|add|remove>
+      permission: place.command.palette
