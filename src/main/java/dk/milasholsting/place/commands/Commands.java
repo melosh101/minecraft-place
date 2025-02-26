@@ -1,8 +1,6 @@
-package dk.milasholsting.place;
+package dk.milasholsting.place.commands;
 
-import dk.milasholsting.place.commands.BlacklistCommand;
-import dk.milasholsting.place.commands.PaintingCommand;
-import dk.milasholsting.place.commands.PaletteCommand;
+import dk.milasholsting.place.Place;
 
 @SuppressWarnings("DataFlowIssue")
 public class Commands {

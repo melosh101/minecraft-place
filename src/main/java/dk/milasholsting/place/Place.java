@@ -1,6 +1,8 @@
 package dk.milasholsting.place;
 
 import com.sk89q.worldguard.WorldGuard;
+import dk.milasholsting.place.commands.Commands;
+import dk.milasholsting.place.events.Events;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.format.TextDecoration;
