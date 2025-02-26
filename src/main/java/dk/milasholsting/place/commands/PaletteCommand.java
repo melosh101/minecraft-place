@@ -20,7 +20,11 @@ import java.util.regex.Pattern;
 
 public class PaletteCommand implements CommandExecutor, TabCompleter {
 
-    final List<String> BlockList = Arrays.stream(Material.values()).filter(Material::isBlock).filter(Predicate.not(Material::isLegacy)).map(Enum::toString).toList();
+    final List<String> BlockList = Arrays.stream(Material.values())
+            .filter(Material::isBlock)
+            .filter(Predicate.not(Material::isLegacy))
+            .map(Enum::toString)
+            .toList();
 
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String @NotNull [] args) {

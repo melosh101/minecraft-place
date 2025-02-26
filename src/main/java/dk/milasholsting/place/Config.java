@@ -28,11 +28,11 @@ public class Config {
         Place.plugin.saveConfig();
     }
 
-    public static void parsePaletteToSet(@Nullable List<?> input) {
+    private static void parsePaletteToSet(@Nullable List<?> input) {
         if(input == null) return;
         input.forEach((block) -> palette.add(block.toString().toLowerCase()));
     }
-    public static void parseBlacklistToSet(@Nullable List<?> input) {
+    private static void parseBlacklistToSet(@Nullable List<?> input) {
         if(input == null) return;
         input.forEach((block) -> blacklist.add(block.toString().toLowerCase()));
     }
