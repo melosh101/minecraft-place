@@ -1,0 +1,68 @@
+name: Pull Request Build
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - 'Writerside/**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: gradle
+
+      - name: Build with Gradle
+        run: ./gradlew build
+
+      - name: Run tests
+        run: ./gradlew test
+
+      - name: Test Report
+        uses: dorny/test-reporter@v1
+        if: success() || failure()
+        with:
+          name: Test Results
+          path: build/test-results/test/*.xml
+          reporter: java-junit
+
+      - name: Check code style
+        run: ./gradlew checkstyleMain checkstyleTest
+        continue-on-error: true
+
+      - name: Archive test results
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: build/reports/tests/
+
+      - name: Comment PR with build status
+        uses: actions/github-script@v6
+        if: always()
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const buildStatus = '${{ job.status }}' === 'success' ? '✅ Build succeeded!' : '❌ Build failed!';
+            const url = '${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}';
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## Build Status: ${buildStatus}
+            
+              [View Details](${url})
+            
+              This build was triggered by PR #${context.issue.number}.
+              `
+            });
