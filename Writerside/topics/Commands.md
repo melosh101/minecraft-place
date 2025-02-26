@@ -56,7 +56,7 @@ Parameters:
 
 #### `/palette list` {collapsible="true"}
 Sends the current palette to the user
-<note>This might change into a inventory gui at some point</note>
+<note>This might change into an inventory gui at some point</note>
 
 #### `/palette clear` {collapsible="true"}
 clears the palette

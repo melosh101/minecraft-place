@@ -5,6 +5,7 @@ You are free to use and modify this plugin to your liking if you want.
 
 ## Features {id=features}
 ### This plugins config can be fully modified and changed though the command line {collapsible="true"}
-look at the [Commands](Commands.md) section of the docs
+
+look at the [](Commands.md) section of the docs
 ### A palette configured via the config 
-### A blacklist for when you just have more blocks to block than add (both waork at the same time)
+### A blacklist for when you just have more blocks to block than add (both work at the same time)
