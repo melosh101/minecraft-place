@@ -1,0 +1,11 @@
+name: place
+version: '1.0-SNAPSHOT'
+main: dk.milasholsting.place.Place
+api-version: '1.21'
+dependencies:
+  server:
+    WorldGuard:
+      required: true
+      load: AFTER
+      join-classpath: true
+bootstrapper: dk.milasholsting.place.Bootstrap

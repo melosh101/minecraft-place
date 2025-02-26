@@ -16,6 +16,10 @@ repositories {
         url = "https://oss.sonatype.org/content/groups/public/"
     }
     maven { url "https://maven.enginehub.org/repo/" }
+    maven {
+        name =  "chimera-releases"
+        url = "https://repo.karuslabs.com/repository/chimera-releases"
+    }
 }
 
 dependencies {
