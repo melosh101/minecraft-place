@@ -13,7 +13,7 @@ Discards the current config and loads from the config.yml file
 #### `/painting set_region` {collapsible="true"}
 set the region that people can place blocks in to paint
 ```yaml
-parameters:
+Parameters:
   Region: required
 ```
     
@@ -22,14 +22,14 @@ prints the current region
 #### `/painting reset_cooldown` {collapsible="true"}
 resets the cooldown for the executor if a player isn't specified
 ```yaml
-parameters:
-  Player: Optional
+Parameters:
+  Player: optional
 ```
 #### `/painting reset_all_cooldowns` {collapsible="true"}
 resets all players cooldowns
 
 ### `/palette` and `/blacklist` {collapsible="true"}
-Restrict the block use to just a few block or to a whole list
+Restrict the blocks available to just a few block or to a whole list
 if you only want to restrict the use of a few blocks use the `/blacklist` command 
 The blacklist command is almost a 100% copy of the palette just operating opposite the palette
 
@@ -40,7 +40,7 @@ Parameters:
   Block: required
 ```
 
-#### `/palette add_pattern`
+#### `/palette add_pattern` {collapsible="true"}
 add multiple blocks with regex
 ```yaml
 Parameters:

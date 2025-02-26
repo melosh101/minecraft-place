@@ -6,7 +6,20 @@
     <build-profile instance="docs">
         <variables>
             <noindex-content>true</noindex-content>
+            <offline-docs>true</offline-docs>
+            <include-in-head>./styles.html</include-in-head>
+            <primary-color>deep-ocean</primary-color>
+            <custom-favicons>
+                icon-256.png
+            </custom-favicons>
+            <header-logo>icon-256.png</header-logo>
+            <download-title>Download plugin</download-title>
+            <download-page>https://github.com/melosh101/minecraft-place/releases</download-page>
+            <showDownloadButton>true</showDownloadButton>
         </variables>
+        <footer>
+            <copyright>Milas Holsting</copyright>
+        </footer>
     </build-profile>
 
 </buildprofiles>
